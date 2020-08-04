@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>汽车详情-汽车报价、汽车服务、轻松挑选</title>
+    <meta name="description" content="e车之家-专业综合汽车购物商城，销售超数万品牌，4020万种商品，囊括小型车、微型车、紧凑车型、中等车型、高级车型、豪华车型、三厢车型、CDV车型、MPV车型、SUV等车型。“让汽车生活更简单”/>
+    <meta name="Keywords" content="小型车、微型车、紧凑车型、中等车型、高级车型、豪华车型、三厢车型、CDV车型、MPV车型、SUV"/>
+    <!-- 引入favicon.ico网页图标 -->
+    <link rel="shortcut icon" href="favicon.ico" >
+    <!-- 引入css初始化的css文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入公共样式的css文件 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 引入首页的css文件 -->
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/shopcar.css" />
+    <script type="text/javascript" src="js/shopcar.js" ></script>
+
+</head>
+<body>
+  <div id="header"><img src="img/logo.png" alt="logo" /></div>
+  <div id="nav">您的位置：<a href="#">首页</a> > <a href="#">我的易车网</a> > 我的购物车</div>
+<div id="navlist">
+  <ul>
+    <li class="navlist_red_left"></li> 
+    <li class="navlist_red">1. 查看购物车</li> 
+    <li class="navlist_red_arrow"></li>
+    <li class="navlist_gray">2. 确认订单信息</li> 
+    <li class="navlist_gray_arrow"></li> 
+     <li class="navlist_gray">3. 付款到支付宝</li> 
+    <li class="navlist_gray_arrow"></li>   
+     <li class="navlist_gray">4. 确认收货</li> 
+    <li class="navlist_gray_arrow"></li> 
+    <li class="navlist_gray">5. 评价</li> 
+    <li class="navlist_gray_right"></li>   
+  </ul>
+</div>
+
+<div id="content">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0" id="shopping">
+ <form action="" method="post" name="myform">
+  <tr>
+    <td class="title_1"><input id="allCheckBox" type="checkbox" value="" onclick="selectAll()" />全选</td>
+    <td class="title_2" colspan="2">店铺宝贝</td>
+    <td class="title_3">获积分</td>
+    <td class="title_4">单价（万）</td>
+    <td class="title_5">数量</td>
+    <td class="title_6">小计（万）</td>
+    <td class="title_7">操作</td>
+  </tr>
+  <tr>
+    <td colspan="8" class="line"></td>
+  </tr>
+  <tr>
+    <td colspan="8" class="shopInfo">品牌：<a href="#">奥迪</a>  </td>  
+  </tr>
+   <tr id="product1">
+    <td class="cart_td_1"><input name="cartCheckBox" type="checkbox" value="product1" onclick="selectSingle()" /></td>
+    <td class="cart_td_2"><img src="images/taobao_cart_01.jpg" alt="shopping"/></td>
+    <td class="cart_td_3"><a href="#">奥迪A6L</a><br />
+        颜色：黑色 <br />
+        保障：<img src="images/taobao_icon_01.jpg" alt="icon" /></td>
+    <td class="cart_td_4">5</td>
+    <td class="cart_td_5">35.42</td>
+    <td class="cart_td_6"><img src="images/taobao_minus.jpg" alt="minus" onclick="changeNum('num_1','minus')" class="hand"/> <input id="num_1" type="text"  value="1" class="num_input" readonly="readonly"/> <img src="images/taobao_adding.jpg" alt="add" onclick="changeNum('num_1','add')"  class="hand"/></td>
+    <td class="cart_td_7"></td>
+    <td class="cart_td_8"><a href="javascript:deleteRow('product1');">删除</a></td>
+  </tr>
+  
+  <tr>
+    <td colspan="8" class="shopInfo">品牌：<a href="#">红旗</a>    </td>
+  </tr>
+   <tr id="product2">
+    <td class="cart_td_1"><input name="cartCheckBox" type="checkbox" value="product2" onclick="selectSingle()" /></td>
+    <td class="cart_td_2"><img src="images/taobao_cart_02.jpg" alt="shopping"/></td>
+    <td class="cart_td_3"><a href="#">红旗H5</a><br />
+        保障：<img src="images/taobao_icon_01.jpg" alt="icon" /> </td>
+    <td class="cart_td_4">12</td>
+    <td class="cart_td_5">15.68</td>
+    <td class="cart_td_6"><img src="images/taobao_minus.jpg" alt="minus" onclick="changeNum('num_2','minus')" class="hand"/> <input id="num_2" type="text"  value="1" class="num_input" readonly="readonly"/> <img src="images/taobao_adding.jpg" alt="add" onclick="changeNum('num_2','add')"  class="hand"/></td>
+    <td class="cart_td_7"></td>
+    <td class="cart_td_8"><a href="javascript:deleteRow('product2');">删除</a></td>
+  </tr>
+
+   <tr>
+   <td  colspan="3"><a href="javascript:deleteSelectRow()"><img src="images/taobao_del.jpg" alt="delete"/></a></td>
+    <td colspan="5" class="shopend">商品总价（不含运费）：<label id="total" class="yellow"></label> 万<br />
+    可获积分 <label class="yellow" id="integral"></label> 点<br />
+    <input name=" " type="image" src="images/taobao_subtn.jpg" /></td>
+  </tr>
+  </form>
+</table>
+
+</div>
+         
+    <div class="footer w">
+        <!-- mod_service -->
+        <div class="mod_service">
+            <ul>
+                <li>
+                    <i class="mod_service_icon mod_service_zheng"></i>
+                    <div class="mod_service_tit">
+                        <h5>正品保障</h5>
+                        <p>正品保障,提供发票</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="mod_service_icon mod_service_kuai"></i>
+                    <div class="mod_service_tit">
+                        <h5>极速提车</h5>
+                        <p>极速提车,极速上路</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="mod_service_icon mod_service_bao"></i>
+                    <div class="mod_service_tit">
+                        <h5>无忧售后</h5>
+                        <p>提高汽车售后保障</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="mod_service_icon mod_service_te"></i>
+                    <div class="mod_service_tit">
+                        <h5>私人服务</h5>
+                        <p>私人定制购车服务</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="mod_service_icon mod_service_bang"></i>
+                    <div class="mod_service_tit">
+                        <h5>帮助中心</h5>
+                        <p>您的选车指南</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- mod_help -->
+        <div class="mod_help">
+            <dl class="mod_help_items">
+                <dt><a href="#">选车指南</a></dt>
+                <dd><a href="#">提车流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">欢迎致电</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl class="mod_help_items">
+                <dt><a href="#">配送方式</a></dt>
+                <dd><a href="#">上门自提</a></dd>
+                <dd><a href="#">4s查询</a></dd>
+                <dd><a href="#">服务查询</a></dd>
+                <dd><a href="#">汽车检验</a></dd>
+                <dd><a href="#">上车体验</a></dd>
+            </dl>
+            <dl class="mod_help_items">
+                <dt><a href="#">支付方式</a></dt>
+                <dd><a href="#">货到付款</a></dd>
+                <dd><a href="#">在线支付</a></dd>
+                <dd><a href="#">分期付款</a></dd>
+                <dd><a href="#">邮局汇款</a></dd>
+                <dd><a href="#">公司转账</a></dd>
+            </dl>
+            <dl class="mod_help_items">
+                <dt><a href="#">资讯服务</a></dt>
+                <dd><a href="#">销售政策</a></dd>
+                <dd><a href="#">价格保护</a></dd>
+                <dd><a href="#">对比说明</a></dd>
+                <dd><a href="#">返修/退换货</a></dd>
+                <dd><a href="#">取消订购</a></dd>
+            </dl>
+            <dl class="mod_help_items">
+                <dt><a href="#">特色服务</a></dt>
+                <dd><a href="#">智能检测</a></dd>
+                <dd><a href="#">二手置换</a></dd>
+                <dd><a href="#">延保服务</a></dd>
+                <dd><a href="#">他人咨询</a></dd>
+                <dd><a href="#">汽车保险</a></dd>
+            </dl>
+            <dl class="mod_help_items mod_help_items_app">
+                <dt><a href="#">帮助中心</a></dt>
+                <dd>
+                    <img src="upload/二维码_03.png" alt="">
+                    <p>易车网客户端</p>
+                </dd>
+            </dl>
+        </div>
+        <!-- copyright -->
+        <div class="mod_copyright">
+            <div class="mod_copyright_links">
+                <a href="#">关于我们</a>|
+                <a href="#">联系我们</a>|
+                <a href="#">联系客服</a>|
+                <a href="#">商家入驻</a>|
+                <a href="#">营销中心</a>|
+                <a href="#">手机易车网</a>|
+                <a href="#">友情链接</a>|
+                <a href="#">销售联盟</a>|
+                <a href="#">二手社区</a>|
+                <a href="#">汽车公益</a>|
+                <a href="#">English Site</a>|
+                <a href="#">Contact U</a>
+            </div>
+            <p class="mod_copyright_info">地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn<br> 京ICP备08001421号京公网安备110108007702
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
